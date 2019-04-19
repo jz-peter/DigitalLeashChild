@@ -1,4 +1,4 @@
 # DigitalLeashChild
 Digital Leash App Child Version
 
-App enables child to report current location to parent.
+App enables child to report current GPS location to parent.
