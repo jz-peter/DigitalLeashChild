@@ -4,8 +4,8 @@
     <string name="txtViewChildName">Child Username</string>
     <string name="editTxtParentUserName">Parent Username</string>
     <string name="editTxtChildUserName">Child Username</string>
-    <string name="btnReport">Report Location</string>
-    <string name="txtViewSuccess">Report Successful</string>
+    <string name="btnSendLocation">Send Location</string>
+    <string name="txtViewSuccess">Location Sent</string>
     <string name="btnBack">Back</string>
 
 

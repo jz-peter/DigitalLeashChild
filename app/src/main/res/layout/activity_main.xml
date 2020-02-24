@@ -1,60 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@android:color/holo_blue_dark"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/txtViewParentName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="@string/txtViewParentName" />
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center_vertical"
+        android:background="@android:color/transparent"
+        android:text="@string/txtViewParentName"
+        app:layout_constraintEnd_toStartOf="@id/editTxtParentUserName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTxtParentUserName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/white"
         android:ems="10"
         android:hint="@string/editTxtParentUserName"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtViewParentName"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
         android:id="@+id/txtViewChildName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txtViewChildName" />
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:background="@android:color/transparent"
+        android:text="@string/txtViewChildName"
+        app:layout_constraintEnd_toStartOf="@id/editTxtChildUserName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtViewParentName" />
 
     <EditText
         android:id="@+id/editTxtChildUserName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"
         android:ems="10"
         android:hint="@string/editTxtChildUserName"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtViewChildName"
+        app:layout_constraintTop_toBottomOf="@id/editTxtParentUserName" />
 
     <Button
-        android:id="@+id/btnReport"
-        android:layout_width="match_parent"
+        android:id="@+id/btnSendLocation"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="15dp"
-
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="62dp"
-        android:onClick="onReport"
-        android:text="@string/btnReport"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="50dp"
+        android:onClick="onSendLocation"
+        android:text="@string/btnSendLocation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTxtChildUserName"
+        app:layout_constraintTop_toBottomOf="@id/txtViewChildName"
         app:layout_constraintVertical_bias="0.5" />
 
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
